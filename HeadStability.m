@@ -69,6 +69,7 @@ while true
     fbk_head = headMod.getNextFeedback();
     fin_ang = zeros(1,numMod)*nan;
     T_Tail = CF.getInGravity('tail');%Tail frame with respect to gravity
+    T_base = FK2(fbk_angles(1:(16 - baseMod)),T_Tail);
     goal_angles = IK(target,baseMod,T_base,options);
     alpha = 0;
     angles = fbk_angles((16-baseMod+1):16) * alpha + goal_angles*(1-alpha);
