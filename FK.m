@@ -5,13 +5,14 @@
 %%% Resultant homogenous transformation matrix is wrt the tail module
 
 
-function T = FK(angles,T_Tail)
+function T = FK2(angles,T_Tail)
     numMod = length(angles);
     T = T_Tail; %declaration of the final homogenous transformation matrix
     for i = 1:numMod
         T = T*HebiLinkFK(angles(i)); 
     end
-
+       
+%   display(numMod);
 end
 
 function T = HebiLinkFK(angle)
