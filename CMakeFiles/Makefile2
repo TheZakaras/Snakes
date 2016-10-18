@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aayush/Downloads/OpenCV/SnakeOF
+CMAKE_SOURCE_DIR = /home/aayush/Downloads/OpenCV/SnakeOF/Snakes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aayush/Downloads/OpenCV/SnakeOF
+CMAKE_BINARY_DIR = /home/aayush/Downloads/OpenCV/SnakeOF/Snakes
 
 #=============================================================================
 # Target rules for target CMakeFiles/OF.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/aayush/Downloads/OpenCV/SnakeOF
 CMakeFiles/OF.dir/all:
 	$(MAKE) -f CMakeFiles/OF.dir/build.make CMakeFiles/OF.dir/depend
 	$(MAKE) -f CMakeFiles/OF.dir/build.make CMakeFiles/OF.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aayush/Downloads/OpenCV/SnakeOF/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/CMakeFiles  1
 	@echo "Built target OF"
 .PHONY : CMakeFiles/OF.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/OF.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OF.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aayush/Downloads/OpenCV/SnakeOF/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OF.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aayush/Downloads/OpenCV/SnakeOF/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/CMakeFiles 0
 .PHONY : CMakeFiles/OF.dir/rule
 
 # Convenience name for target.

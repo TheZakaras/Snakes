@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aayush/Downloads/OpenCV/SnakeOF
+CMAKE_SOURCE_DIR = /home/aayush/Downloads/OpenCV/SnakeOF/Snakes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aayush/Downloads/OpenCV/SnakeOF
+CMAKE_BINARY_DIR = /home/aayush/Downloads/OpenCV/SnakeOF/Snakes
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OF.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/OF.dir/flags.make
 
 CMakeFiles/OF.dir/OF.cpp.o: CMakeFiles/OF.dir/flags.make
 CMakeFiles/OF.dir/OF.cpp.o: OF.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aayush/Downloads/OpenCV/SnakeOF/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/OF.dir/OF.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OF.dir/OF.cpp.o -c /home/aayush/Downloads/OpenCV/SnakeOF/OF.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OF.dir/OF.cpp.o -c /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/OF.cpp
 
 CMakeFiles/OF.dir/OF.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OF.dir/OF.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aayush/Downloads/OpenCV/SnakeOF/OF.cpp > CMakeFiles/OF.dir/OF.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/OF.cpp > CMakeFiles/OF.dir/OF.cpp.i
 
 CMakeFiles/OF.dir/OF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OF.dir/OF.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aayush/Downloads/OpenCV/SnakeOF/OF.cpp -o CMakeFiles/OF.dir/OF.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/OF.cpp -o CMakeFiles/OF.dir/OF.cpp.s
 
 CMakeFiles/OF.dir/OF.cpp.o.requires:
 .PHONY : CMakeFiles/OF.dir/OF.cpp.o.requires
@@ -131,6 +131,6 @@ CMakeFiles/OF.dir/clean:
 .PHONY : CMakeFiles/OF.dir/clean
 
 CMakeFiles/OF.dir/depend:
-	cd /home/aayush/Downloads/OpenCV/SnakeOF && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aayush/Downloads/OpenCV/SnakeOF /home/aayush/Downloads/OpenCV/SnakeOF /home/aayush/Downloads/OpenCV/SnakeOF /home/aayush/Downloads/OpenCV/SnakeOF /home/aayush/Downloads/OpenCV/SnakeOF/CMakeFiles/OF.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aayush/Downloads/OpenCV/SnakeOF/Snakes && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aayush/Downloads/OpenCV/SnakeOF/Snakes /home/aayush/Downloads/OpenCV/SnakeOF/Snakes /home/aayush/Downloads/OpenCV/SnakeOF/Snakes /home/aayush/Downloads/OpenCV/SnakeOF/Snakes /home/aayush/Downloads/OpenCV/SnakeOF/Snakes/CMakeFiles/OF.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/OF.dir/depend
 

@@ -1,1 +1,1 @@
-/home/aayush/Downloads/OpenCV/SnakeOF/CMakeFiles/OF.dir
+/home/aayush/Downloads/OpenCV/SnakeOF/Snakes/CMakeFiles/OF.dir

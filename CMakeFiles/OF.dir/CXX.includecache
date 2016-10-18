@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/aayush/Downloads/OpenCV/SnakeOF/OF.cpp
+/home/aayush/Downloads/OpenCV/SnakeOF/Snakes/OF.cpp
 stdio.h
 -
 opencv2/opencv.hpp
