@@ -1,6 +1,5 @@
 //Optical Flow between two images
 
-
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -20,10 +19,10 @@ int main(int argc, char** argv)
 
 	maxCorners2=100;
 	maxCorners1=100;
-	qualityLevel2=0.5;
-	qualityLevel1=0.5;
-	minDistance1=.20;
-	minDistance2=.20;
+	qualityLevel2=0.02;
+	qualityLevel1=0.02;
+	minDistance1=.10;
+	minDistance2=.10;
 
 	int vert_mag[maxCorners2];
 
@@ -32,6 +31,7 @@ int main(int argc, char** argv)
 	im2 = imread(argv[2],0);
 	im = imread(argv[1],1);
 
+	;
 
 	goodFeaturesToTrack(im1,features1,maxCorners1,qualityLevel1,minDistance1,Mat(),3,0,0.04);
 
@@ -56,12 +56,15 @@ int main(int argc, char** argv)
 	//cout << nxtpts;
 
 	for(int i =1;i<maxCorners2;i++)
-	{	
-		Point p0(ceil(features1[i].x),ceil(features1[i].y));
-		Point p1(ceil(features2[i].x),ceil(features2[i].y));
-		vert_mag[i] = abs(features2[i].y - features1[i].y);
-		arrowedLine(im,p0,p1,CV_RGB(100,100,100),2);
-
+	{	if(!((features1[i].x>1110)&&(features1[i].y<20)))
+		{	if(!((features1[i].x<175)&&(features1[i].y>690)))
+			{
+				Point p0(ceil(features1[i].x),ceil(features1[i].y));
+				Point p1(ceil(features2[i].x),ceil(features2[i].y));
+				vert_mag[i] = abs(features2[i].y - features1[i].y);
+				arrowedLine(im,p0,p1,CV_RGB(100,100,100),2);
+			}
+		}	
 	}
 
 	int sizeX = features1.size();
@@ -73,15 +76,15 @@ int main(int argc, char** argv)
 
 	Mat plot = Mat::ones(sizeX,sizeY,CV_8UC3);
 
-	for (int i=1;i<sizeX;i++)
+	/*for (int i=1;i<sizeX;i++)
 	{
-		Point plotPoint1(i,maxCorners1);
-		Point plotPoint2(i,vert_mag[i]);
+		Point plotPoint1(i,sizeY);
+		Point plotPoint2(i,sizeY-vert_mag[i]);
 		line(plot,plotPoint1,plotPoint2,CV_RGB(255,255,255));
-	}
+	}*/
 	
-	for(int i=1;i<sizeX;i++)
-		cout<<vert_mag[i]<<endl;
+	//for(int i=1;i<sizeX;i++)
+	//	cout<<vert_mag[i]<<endl;
 
 	namedWindow("Image",0);
 	imshow("Image",plot);
@@ -98,5 +101,3 @@ int main(int argc, char** argv)
 	waitKey(0);
 	return 0;
 }
-
-
