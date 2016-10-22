@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 		cap.set(CV_CAP_PROP_POS_FRAMES,frameNum);
 		cap >> im1;
 
-		cap.set(CV_CAP_PROP_POS_FRAMES,frameNum+12);
+		cap.set(CV_CAP_PROP_POS_FRAMES,frameNum+2);
 		cap >> im2;
 
 		im = im1;
@@ -125,7 +125,7 @@ int main(int argc, char** argv)
 		if(waitKey(30)>=0)
 			break;
 		//	waitKey(0);
-		frameNum = frameNum + 24;	
+		frameNum = frameNum + 3;	
 	}
 	return 0;
 }
