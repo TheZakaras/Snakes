@@ -9,7 +9,8 @@ using namespace std;
 
 int main(int argc, char** argv)
 {	
-	VideoCapture cap("/home/aayush/Downloads/OpenCV/SnakeOF/Snakes/images/test4.mp4");
+	VideoCapture cap("/home/aayush/Downloads/OpenCV/SnakeOF/Snakes/images/test5.mp4");
+//	VideoCapture cap("/home/aayush/Downloads/OpenCV/SnakeOF/Snakes/images/2016-10-24-123939.webm");
 	int frameNum = 1;
 	Mat im1,im2,im;
 	vector<Point2f> features1,features2;
@@ -19,15 +20,15 @@ int main(int argc, char** argv)
 	double qualityLevel1,qualityLevel2;
 	double minDistance1,minDistance2;
 
-		maxCorners2=100;
-		maxCorners1=100;
-		qualityLevel2=0.2;
-		qualityLevel1=0.2;
+		maxCorners2=500;
+		maxCorners1=500;
+		qualityLevel2=0.02;
+		qualityLevel1=0.02;
 		minDistance1=10;
 		minDistance2=10;
 
 		int vert_mag[maxCorners2];
-	while(1)
+	while(frameNum<300)
 	{
 
 		cap.set(CV_CAP_PROP_POS_FRAMES,frameNum);
@@ -53,7 +54,7 @@ int main(int argc, char** argv)
 		*/
 		goodFeaturesToTrack(im1,features1,maxCorners1,qualityLevel1,minDistance1,Mat(),3,0,0.04);
 
-		goodFeaturesToTrack(im2,features2,maxCorners2,qualityLevel2,minDistance2,Mat(),3,0,0.04);
+		//goodFeaturesToTrack(im2,features2,maxCorners2,qualityLevel2,minDistance2,Mat(),3,0,0.04);
 
 		/*for (size_t i =0;i<features1.size();i++)
 		cv::circle(im1,features1[i],10,cv::Scalar(255.),-1);
@@ -66,9 +67,9 @@ int main(int argc, char** argv)
 
 		namedWindow("image2",WINDOW_AUTOSIZE);
 		imshow(argv[2],im2);
-		*/
+		*/ 
 		//features2 = features1;
-			calcOpticalFlowPyrLK(im1,im2,features1,features2,status,err);
+		calcOpticalFlowPyrLK(im1,im2,features1,features2,status,err);
 		//features_found.reserve(maxCorners2);
 		//cout << features_found.size();
 		//cout << nxtpts;
@@ -107,11 +108,11 @@ int main(int argc, char** argv)
 			line(plot,plotPoint1,plotPoint2,CV_RGB(255,255,255));
 		}
 	
-		for(int i=1;i<sizeX;i++)
-			cout<<vert_mag[i]<<endl;
+		//for(int i=1;i<sizeX;i++)
+		//	cout<<vert_mag[i]<<endl;
 
-		namedWindow("Image",0);
-		imshow("Image",plot);
+		//namedWindow("Image",0);
+		//imshow("Image",plot);
 
 		namedWindow("Image2",0);
 		imshow("Image2",im);
@@ -122,10 +123,10 @@ int main(int argc, char** argv)
 		cout<<"Features2.y= "<<features2[1].y<<endl;
 		*/
 
-		if(waitKey(30)>=0)
+		if(waitKey(1)>=0)
 			break;
 		//	waitKey(0);
-		frameNum = frameNum + 3;	
+		frameNum = frameNum + 12;	
 	}
 	return 0;
 }
